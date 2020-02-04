@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Christopher Nolan movies</title>
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet'>
+</head>
+<body>
+
+  <div class="panels">
+    <div class="panel panel1">
+      <p>“Why do we fall?”</p>
+      <p>The Dark Knight</p>
+      <p><a href="https://youtu.be/EXeTwQWrcwY" target="_blank">click here to watch the video</a></p>
+    </div>
+    <div class="panel panel2">
+      <p>“Your mind is a crime scene.”</p>
+      <p>Inception</p>
+      <p><a href="https://youtu.be/YoHD9XEInc0" target="_blank">click here to watch the video</a></p>
+    </div>
+    <div class="panel panel3">
+      <p>-“It’s not possible.”<br>-“No, it’s necessary.”</p>
+      <p>Interstellar</p>
+      <p><a href="https://youtu.be/0vxOhd4qlnA" target="_blank">click here to watch the video</a></p>
+    </div>
+    <div class="panel panel4">
+      <p>“Are you watching closely?”</p>
+      <p>The Prestige</p>
+      <p><a href="https://youtu.be/RLtaA9fFNXU" target="_blank">click here to watch the video</a></p>
+    </div>
+    <div class="panel panel5">
+      <p>“We shall never surrender.”</p>
+      <p>Dunkirk</p>
+      <p><a href="https://youtu.be/F-eMt3SrfFU" target="_blank">click here to watch the video</a></p>
+    </div>
+  </div>
+
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+    }
+
+    .panels {
+      min-height: 100vh;
+      display: flex;
+      overflow: hidden;
+    }
+    
+    .panel {
+      box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+      width: 100px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      background-size: cover;
+      background-position: center;
+      background-color: black;
+      flex: 1;
+      text-align: center;
+      transition:
+        font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        background 0.2s;
+    }
+
+    .panel1 { background-image:url(https://wallpapercave.com/wp/TZEWu85.jpg); }
+    .panel2 { background-image:url(https://www.tokkoro.com/picsup/2965976-inception-fantasy-art-movies___fantasy-wallpapers.jpg); }
+    .panel3 { background-image:url(https://images.hdqwalls.com/download/interstellar-endurance-spaceship-2048x1152.jpg); }
+    .panel4 { background-image:url(https://www.culture.ru/storage/images/87c96eca66388f6d3c659a32734d3142/d73a3c2efd9e1291929ba66a6c47ab2a.jpg); }
+    .panel5 { background-image:url(https://st.kp.yandex.net/im/kadr/3/1/0/kinopoisk.ru-Dunkirk-3107688.jpg); }
+
+    .panel > p {
+      width: 100%;
+      margin: 0;
+      color: white;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.5s;
+    }
+
+    .panel p:nth-child(2) {
+      font-size: 1.5em;
+    }
+
+    .panel > *:first-child { transform: translateY(-100%); }
+    .panel.open-active > *:first-child { transform: translateY(0); }
+    .panel > *:last-child { transform: translateY(100%); }
+    .panel.open-active > *:last-child { transform: translateY(0); }
+    .panel > *:nth-child(2) { transform: scale(0); }
+    .panel.open-active > *:nth-child(2) { transform: scale(1); }
+
+    .panel.open {
+      font-size: 40px;
+      flex: 5;
+    }
+
+    a {
+      text-decoration: none;
+      color: rgba(197, 0, 0, 0.767);
+    }
+
+  </style>
+
+<script>
+
+  const panels = document.querySelectorAll('.panel');
+
+  function toggleOpen() {
+    const panelsArray = Array.from(panels);
+    if (panelsArray.some(elem => elem.classList.length !== 2)) {
+      panelsArray.forEach(elem => elem.classList.remove('open'));
+    }
+    this.classList.toggle('open');
+  }
+
+  function toggleActive(e) {
+    if (e.propertyName.includes('flex-grow')) {
+      this.classList.toggle('open-active');
+    }
+  }
+
+  panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+  panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+
+</script>
+
+
+</body>
+</html>
