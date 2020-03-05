@@ -69,6 +69,7 @@
 
     .panel > .video:nth-child(2) {
       flex: 2;
+      width: 100%;
     }
 
     .panel1 { background-image:url(https://wallpapercave.com/wp/TZEWu85.jpg); }
@@ -110,6 +111,23 @@
     a {
       text-decoration: none;
       color: rgba(197, 0, 0, 0.767);
+    }
+
+    .video {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-width: 0;
+      outline-width: 0;
     }
 
   </style>
