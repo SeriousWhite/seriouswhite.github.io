@@ -10,28 +10,28 @@
   <div class="panels">
     <div class="panel panel1">
       <p>“Why do we fall?”</p>
+      <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/0uSOiu_WUDw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
       <p>The Dark Knight</p>
-      <p><a href="https://youtu.be/EXeTwQWrcwY" target="_blank">click here to watch the video</a></p>
     </div>
     <div class="panel panel2">
       <p>“Your mind is a crime scene.”</p>
+      <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/QxL5TMN--dQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
       <p>Inception</p>
-      <p><a href="https://youtu.be/YoHD9XEInc0" target="_blank">click here to watch the video</a></p>
     </div>
     <div class="panel panel3">
       <p>-“It’s not possible.”<br>-“No, it’s necessary.”</p>
+      <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/fcNRbpv_2nI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
       <p>Interstellar</p>
-      <p><a href="https://youtu.be/0vxOhd4qlnA" target="_blank">click here to watch the video</a></p>
     </div>
     <div class="panel panel4">
       <p>“Are you watching closely?”</p>
+      <div class="video"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fU0uiGAm_SY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
       <p>The Prestige</p>
-      <p><a href="https://youtu.be/RLtaA9fFNXU" target="_blank">click here to watch the video</a></p>
     </div>
     <div class="panel panel5">
       <p>“We shall never surrender.”</p>
+      <div class="video"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2W3KDB0yHYM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
       <p>Dunkirk</p>
-      <p><a href="https://youtu.be/F-eMt3SrfFU" target="_blank">click here to watch the video</a></p>
     </div>
   </div>
 
@@ -67,6 +67,10 @@
         background 0.2s;
     }
 
+    .panel > .video:nth-child(2) {
+      flex: 2;
+    }
+
     .panel1 { background-image:url(https://wallpapercave.com/wp/TZEWu85.jpg); }
     .panel2 { background-image:url(https://www.tokkoro.com/picsup/2965976-inception-fantasy-art-movies___fantasy-wallpapers.jpg); }
     .panel3 { background-image:url(https://images.hdqwalls.com/download/interstellar-endurance-spaceship-2048x1152.jpg); }
@@ -87,7 +91,7 @@
       transition: transform 0.5s;
     }
 
-    .panel p:nth-child(2) {
+    .panel p:last-child {
       font-size: 1.5em;
     }
 
@@ -95,8 +99,8 @@
     .panel.open-active > *:first-child { transform: translateY(0); }
     .panel > *:last-child { transform: translateY(100%); }
     .panel.open-active > *:last-child { transform: translateY(0); }
-    .panel > *:nth-child(2) { transform: scale(0); }
-    .panel.open-active > *:nth-child(2) { transform: scale(1); }
+    .panel > *:nth-child(2) { transform: scale(0); visibility: hidden; }
+    .panel.open-active > *:nth-child(2) { transform: scale(1); visibility: visible; }
 
     .panel.open {
       font-size: 40px;
@@ -125,6 +129,8 @@
   function toggleActive(e) {
     if (e.propertyName.includes('flex-grow')) {
       this.classList.toggle('open-active');
+      const link = this.querySelector('.video').querySelector('iframe').src;
+      this.querySelector('.video').querySelector('iframe').setAttribute('src', link + '?autoplay=1');
     }
   }
 
