@@ -1,42 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Christopher Nolan movies</title>
   <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet'>
 </head>
+
 <body>
 
   <div class="panels">
     <div class="panel panel1">
       <p>“Why do we fall?”</p>
-      <div class="video"><iframe frameborder="0" width="640" height="360" src="https://www.dailymotion.com/embed/video/x439t2n" allowfullscreen allow="autoplay"></iframe></div>
+      <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/0uSOiu_WUDw"
+          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe></div>
       <p>The Dark Knight</p>
     </div>
     <div class="panel panel2">
       <p>“Your mind is a crime scene.”</p>
-      <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/QxL5TMN--dQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/QxL5TMN--dQ"
+          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe></div>
       <p>Inception</p>
     </div>
     <div class="panel panel3">
       <p>-“It’s not possible.”<br>-“No, it’s necessary.”</p>
-      <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/fcNRbpv_2nI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/fcNRbpv_2nI"
+          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe></div>
       <p>Interstellar</p>
     </div>
     <div class="panel panel4">
       <p>“Are you watching closely?”</p>
-      <div class="video"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fU0uiGAm_SY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fU0uiGAm_SY"
+          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe></div>
       <p>The Prestige</p>
     </div>
     <div class="panel panel5">
       <p>“We shall never surrender.”</p>
-      <div class="video"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2W3KDB0yHYM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2W3KDB0yHYM"
+          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe></div>
       <p>Dunkirk</p>
     </div>
   </div>
 
   <style>
-
     body {
       margin: 0;
       padding: 0;
@@ -48,10 +59,10 @@
       display: flex;
       overflow: hidden;
     }
-    
+
     .panel {
       cursor: pointer;
-      box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+      box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
       width: 100px;
       display: flex;
       align-items: center;
@@ -63,23 +74,37 @@
       flex: 1;
       text-align: center;
       transition:
-        font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
-        flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+        flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
         background 0.2s;
     }
 
-    .panel > .video:nth-child(2) {
+    .panel>.video:nth-child(2) {
       flex: 2;
       width: 100%;
     }
 
-    .panel1 { background-image:url(https://wallpapercave.com/wp/TZEWu85.jpg); }
-    .panel2 { background-image:url(https://www.tokkoro.com/picsup/2965976-inception-fantasy-art-movies___fantasy-wallpapers.jpg); }
-    .panel3 { background-image:url(https://images.hdqwalls.com/download/interstellar-endurance-spaceship-2048x1152.jpg); }
-    .panel4 { background-image:url(https://www.culture.ru/storage/images/87c96eca66388f6d3c659a32734d3142/d73a3c2efd9e1291929ba66a6c47ab2a.jpg); }
-    .panel5 { background-image:url(https://st.kp.yandex.net/im/kadr/3/1/0/kinopoisk.ru-Dunkirk-3107688.jpg); }
+    .panel1 {
+      background-image: url(https://wallpapercave.com/wp/TZEWu85.jpg);
+    }
 
-    .panel > p {
+    .panel2 {
+      background-image: url(https://www.tokkoro.com/picsup/2965976-inception-fantasy-art-movies___fantasy-wallpapers.jpg);
+    }
+
+    .panel3 {
+      background-image: url(https://images.hdqwalls.com/download/interstellar-endurance-spaceship-2048x1152.jpg);
+    }
+
+    .panel4 {
+      background-image: url(https://www.culture.ru/storage/images/87c96eca66388f6d3c659a32734d3142/d73a3c2efd9e1291929ba66a6c47ab2a.jpg);
+    }
+
+    .panel5 {
+      background-image: url(https://st.kp.yandex.net/im/kadr/3/1/0/kinopoisk.ru-Dunkirk-3107688.jpg);
+    }
+
+    .panel>p {
       width: 100%;
       margin: 0;
       color: white;
@@ -97,12 +122,31 @@
       font-size: 1.5em;
     }
 
-    .panel > *:first-child { transform: translateY(-100%); }
-    .panel.open-active > *:first-child { transform: translateY(0); }
-    .panel > *:last-child { transform: translateY(100%); }
-    .panel.open-active > *:last-child { transform: translateY(0); }
-    .panel > *:nth-child(2) { transform: scale(0); visibility: hidden; }
-    .panel.open-active > *:nth-child(2) { transform: scale(1); visibility: visible; }
+    .panel>*:first-child {
+      transform: translateY(-100%);
+    }
+
+    .panel.open-active>*:first-child {
+      transform: translateY(0);
+    }
+
+    .panel>*:last-child {
+      transform: translateY(100%);
+    }
+
+    .panel.open-active>*:last-child {
+      transform: translateY(0);
+    }
+
+    .panel>*:nth-child(2) {
+      transform: scale(0);
+      visibility: hidden;
+    }
+
+    .panel.open-active>*:nth-child(2) {
+      transform: scale(1);
+      visibility: visible;
+    }
 
     .panel.open {
       font-size: 40px;
@@ -131,34 +175,34 @@
       border-width: 0;
       outline-width: 0;
     }
-
   </style>
 
-<script>
+  <script>
 
-  const panels = document.querySelectorAll('.panel');
+    const panels = document.querySelectorAll('.panel');
 
-  function toggleOpen() {
-    const panelsArray = Array.from(panels);
-    if (panelsArray.some(elem => elem.classList.length !== 2)) {
-      panelsArray.forEach(elem => elem.classList.remove('open'));
+    function toggleOpen() {
+      const panelsArray = Array.from(panels);
+      if (panelsArray.some(elem => elem.classList.length !== 2)) {
+        panelsArray.forEach(elem => elem.classList.remove('open'));
+      }
+      this.classList.toggle('open');
     }
-    this.classList.toggle('open');
-  }
 
-  function toggleActive(e) {
-    if (e.propertyName.includes('flex-grow')) {
-      this.classList.toggle('open-active');
-      const link = this.querySelector('.video').querySelector('iframe').src;
-      this.querySelector('.video').querySelector('iframe').setAttribute('src', link + '?autoplay=1');
+    function toggleActive(e) {
+      if (e.propertyName.includes('flex-grow')) {
+        this.classList.toggle('open-active');
+        const link = this.querySelector('.video').querySelector('iframe').src;
+        this.querySelector('.video').querySelector('iframe').setAttribute('src', link + '?autoplay=1');
+      }
     }
-  }
 
-  panels.forEach(panel => panel.addEventListener('click', toggleOpen));
-  panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+    panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
 
-</script>
+  </script>
 
 
 </body>
+
 </html>
